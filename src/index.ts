@@ -1,6 +1,6 @@
 import * as usb from 'usb';
-import {Device} from 'usb/dist/usb';
-import {Endpoint} from 'usb/dist/usb/endpoint';
+import { Device } from 'usb/dist/usb';
+import { Endpoint } from 'usb/dist/usb/endpoint';
 import { Interface } from 'usb/dist/usb/interface';
 
 const delay = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
