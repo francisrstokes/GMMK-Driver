@@ -7,18 +7,24 @@ const main = async (): Promise<number> => {
 
   try {
     driver = new GMMK()
-    await driver.setBrightness(0);
-    await delay(500);
-    await driver.setBrightness(1);
-    await delay(500);
-    await driver.setBrightness(2);
-    await delay(500);
-    await driver.setBrightness(3);
+    // await driver.setBrightness(0);
+    // await delay(500);
+    // await driver.setBrightness(1);
+    // await delay(500);
+    // await driver.setBrightness(2);
+    // await delay(500);
+    // await driver.setBrightness(3);
 
-    for (let i = 0; i < 19; i++) {
-      await delay(1000);
-      await driver.setLEDMode(i);
-    }
+    // for (let i = 0; i < 19; i++) {
+    //   await delay(1000);
+    //   await driver.setLEDMode(i);
+    // }
+
+    await driver.setProfile(1);
+    await delay(2000);
+    await driver.setProfile(2);
+    await delay(2000);
+    await driver.setProfile(0);
   } catch (error) {
     console.log((error as Error).message)
     exitCode = -1
